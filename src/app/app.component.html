@@ -1,11 +1,14 @@
 <input (keyup)="changeImage($event)" [value]="imgURl"/>
-<app-post [image]="imgURl"></app-post>
+<app-post [image]="imgURl" (imgSelected)="logImg($event)">
+    <p>content</p>
+</app-post>
 <p>hello Angular ... {{ title }}</p>
 <p> {{ getName() }}</p>
 <p>{{12 + 13}}</p>
-
-<button
+<input (keyup)="changeText($event)" [value]="text">
+<p >{{ text }}</p>
+<!-- <button
     type="button"
     (click)="sayMessage()">
     Trigger alert message
-</button>
+</button> -->
